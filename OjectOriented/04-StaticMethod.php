@@ -15,7 +15,27 @@ class Staff {
   }
 
   public function hello() {
-    
+    if( is_null($this->name)) {
+      echo "안녕하세요!","\n";
+    } else {
+      echo "안녕하세요, {$this -> name}입니다.","\n";
+    }
   }
+
+  public function latePenalty () {
+    self::deposit(1000);
+  }
+
+  public function totalDeposit () {
+    echo self::$piggyBank;
+  }
+}
+
+$staff = new Staff("김사랑",25);
+$staff -> hello();
+$staff -> latePenalty();
+$staff -> latePenalty();
+$staff -> totalDeposit();
+
 
  ?>
